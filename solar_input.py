@@ -97,9 +97,9 @@ def write_space_objects_data_to_file(output_filename, space_objects):
     """
     with open(output_filename, 'w', encoding='utf8') as out_file:
         for obj in space_objects:
-            out_file.writelines(obj.type, str(obj.R), obj.color, str(obj.m),
-                                str(obj.x),
-                                str(obj.y), str(obj.Vx), str(obj.Vy))
+            out_file.writelines(obj.type + str(obj.R) + obj.color + str(obj.m) +
+                                str(obj.x) +
+                                str(obj.y) + str(obj.Vx) + str(obj.Vy))
 
 
 # FIXME: хорошо бы ещё сделать функцию, сохранающую статистику в заданный файл...
