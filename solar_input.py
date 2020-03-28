@@ -14,7 +14,7 @@ def read_space_objects_data_from_file(input_filename):
     """
 
     objects = []
-    with open(input_filename) as input_file:
+    with open(input_filename, encoding='utf8') as input_file:
         for line in input_file:
             if len(line.strip()) == 0 or line[0] == '#':
                 continue  # пустые строки и строки-комментарии пропускаем
@@ -95,7 +95,7 @@ def write_space_objects_data_to_file(output_filename, space_objects):
     **output_filename** — имя входного файла
     **space_objects** — список объектов планет и звёзд
     """
-    with open(output_filename, 'w') as out_file:
+    with open(output_filename, 'w', encoding='utf8') as out_file:
         for obj in space_objects:
             out_file.write(space_objects.type, str(space_objects.R), space_objects.color, str(space_objects.m),
                            str(space_objects.x),
